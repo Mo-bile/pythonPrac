@@ -13,6 +13,7 @@ soup = BeautifulSoup(data.text, 'html.parser')
 
 # 코딩 시작
 title = soup.select_one('#old_content > table > tbody > tr:nth-child(2) > td.title > div > a')
+print(title)
 print(title['href'])
 
 #old_content > table > tbody > tr:nth-child(3) > td.title > div > a
@@ -41,5 +42,5 @@ for movie in movies:
             'star' : star
         }
 
-        db.movies.insert_one(doc)
+        # db.movies.insert_one(doc)
 
